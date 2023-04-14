@@ -1,0 +1,21 @@
+$backgroundColor: #202024;
+$colorWorld: #00B37E;
+
+header{
+    background: $backgroundColor;
+    padding: 20px 40px;
+
+    h1{
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        margin: 0;
+        display: flex;
+        gap: 10px;
+        letter-spacing: 3px;
+        color: #fff;
+
+        i{
+            color: $colorWorld;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+$colorCard: #202024;
+$colorVerde: #00B37E;
+$colorBlanco: #E1E1E6;
+
+
+.noticias{
+    @media screen and (max-width: 575px){
+        margin-top: 20px;
+    }
+
+    .cuerpo{
+        padding: 20px;
+        background: $colorCard;
+        border-radius: 8px;
+        margin-bottom: 20px;
+
+        h2{
+            font-size: 1.3rem;
+            margin: 0;
+
+            @media screen and (max-width: 575px){
+                font-size: 1rem;
+            }
+        }
+        hr{
+            border-color: #323238;
+        }
+        .fecha{
+            text-align: right;
+            p{
+                margin: 0;
+                margin-top: 15px;
+            }
+        }
+        .informacion{
+            p{
+                margin: 0;
+            }
+        }
+    }
+}

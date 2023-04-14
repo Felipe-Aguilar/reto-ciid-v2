@@ -1,0 +1,44 @@
+$colorCard: #202024;
+$colorVerde: #00B37E;
+$colorBlanco: #E1E1E6;
+
+.filtro{
+    .cuerpo{
+        background: $colorCard;
+        padding: 15px;
+        border-radius: 8px;
+        font-weight: 300;
+
+        .title{
+            text-align: center;
+
+            p{
+                margin: 0;
+                font-weight: 400;
+                i{
+                    margin-left: 10px;
+                    color: $colorVerde;
+                }
+            }
+        }
+        hr{
+            border-color: #323238;
+        }
+
+        .btn-filtro{
+            button{
+                width: 100%;
+                text-align: left;
+                background: transparent;
+                border: none;
+                color: $colorBlanco;
+                padding: 10px 0;
+                display: flex;
+                gap: 5px;
+                i{
+                    color: $colorVerde;
+                }
+            }
+        }
+    }
+}

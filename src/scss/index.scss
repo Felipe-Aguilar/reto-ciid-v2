@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    box-sizing: border-box;
+    background: #121214;
+    color: #E1E1E6;
+
+    a{
+        text-decoration: none;
+    }
+    button{
+        outline: none!important;
+    }
+}
+
+@import 'header';
+@import 'news';
+@import 'filtro';
+@import 'noticias';
+@import 'footer';
