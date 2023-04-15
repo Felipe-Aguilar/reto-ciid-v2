@@ -4,8 +4,16 @@ $colorBlanco: #E1E1E6;
 
 
 .noticias{
+    
     @media screen and (max-width: 575px){
         margin-top: 20px;
+    }
+    @media screen and (max-width: 990px){
+        margin-top: 20px;
+    }
+
+    .feed-titulo{
+        text-transform: uppercase;
     }
 
     .cuerpo{
@@ -32,9 +40,17 @@ $colorBlanco: #E1E1E6;
                 margin-top: 15px;
             }
         }
+        img{
+            display: block;
+            margin: auto;
+        }
         .informacion{
             p{
                 margin: 0;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                overflow: hidden;
             }
         }
     }

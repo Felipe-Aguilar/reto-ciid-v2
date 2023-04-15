@@ -1,4 +1,26 @@
-const Filtro = () => {
+import { useContext } from "react";
+import { Busqueda } from "../context/Busqueda";
+
+import { BusquedaNoticias } from "../API/NoticiasAPI";
+
+const Filtro = ({ actualizaBusqueda, datosNoticias }) => {
+
+    const { busqueda, setBusqueda, setBuscado } = useContext(Busqueda);
+
+    const realizaBusqueda = async (e) => {
+        const buscando = e.target.innerText;
+        setBusqueda(true);
+        setBuscado(buscando);
+
+        const noticiasBusqueda = await BusquedaNoticias(buscando);
+        actualizaBusqueda(noticiasBusqueda);
+    }
+
+    const Inicio = () => {
+        datosNoticias();
+        setBusqueda(false);
+    }
+
     return (
         <div className="filtro col-12 col-lg-3">
             <div className="cuerpo">
@@ -10,17 +32,25 @@ const Filtro = () => {
                 </div>
                 <hr/>
                 <div className="btn-filtro">
-                    <button>
+
+                    { busqueda &&
+                        <button onClick={Inicio}>
+                            <i className="bi bi-house"></i>
+                            Inicio
+                        </button>
+                    }
+
+                    <button onClick={realizaBusqueda}>
                         <i className="bi bi-caret-right"></i>
-                        Lorem, ipsum dolor.
+                        Mundo de la economía digital
                     </button>
-                    <button>
+                    <button onClick={realizaBusqueda}>
                         <i className="bi bi-caret-right"></i>
-                        Lorem, ipsum dolor.
+                        Entretenimiento
                     </button>
-                    <button>
+                    <button onClick={realizaBusqueda}>
                         <i className="bi bi-caret-right"></i>
-                        Lorem, ipsum dolor.
+                        Negocios
                     </button>
                 </div>
             </div>
